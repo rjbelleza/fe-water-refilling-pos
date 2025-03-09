@@ -9,11 +9,11 @@ const Login = () => {
     const [message, setMessage] = useState("");
     const navigate = useNavigate();
     
-    const user = [{email: "jane@example.com", username: "johndoe", password: "password"}];
+    const user = [{email: "jane@example.com", username: "janedoe", password: "password"}];
 
     const handleValidate = (e) => {
         e.preventDefault();
-        (email === user[0].email || username === user[0].username) && password === user[0].password ? navigate("/dashboard") : setError(true); setMessage("Invalid Credentials!");
+        (email === user[0].email || username === user[0].username) && password === user[0].password ? navigate("/dashboard") : setError(true); setMessage("Invalid credentials!");
     };
 
     return (
@@ -76,8 +76,8 @@ const Login = () => {
                 </div>
             </div>
             {error && 
-                <div className="h-[50px] w-[250px] rounded-lg bg-red-800 transition-all p-3 z-20">
-                    <p className="text-center text-white text-[15px]">{message}</p>
+                <div className="fixed bottom-5 w-50 z-10 left-1/2 opacity-90 -translate-x-1/2 bg-error text-white px-6 py-3 rounded-lg shadow-lg">
+                    <p className="text-center text-white text-[13px]">{message}</p>
                 </div> 
             }
         </div>
