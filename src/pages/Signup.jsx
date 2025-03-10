@@ -8,8 +8,8 @@ const Signup = () => {
             <Link to="/">
                 <img src={back} className="h-[40px] w-[40px] fixed left-5 top-5" />
             </Link>
-            <div className="h-[440px] w-[700px] rounded-md flex flex-col p-[30px] bg-secondary">
-                <h1 className="text-[20px] font-bold text-primary mb-[30px]">Create Account</h1>
+            <div className="h-[440px] w-[600px] rounded-md flex flex-col p-[30px] bg-secondary opacity-90">
+                <h1 className="text-[20px] font-bold text-primary mb-[30px]">Create an Account</h1>
                 <form className="w-full flex justify-around flex-wrap gap-5">
                     <div className="flex flex-col gap-2">
                         <label className="text-[13px] font-medium ml-[5px]">Full name*</label>

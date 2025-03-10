@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import logo from "/images/Aqua.jpg";
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -23,11 +24,8 @@ const Login = () => {
             <div className="flex h-[450px] w-[780px] bg-blue-500 rounded-lg z-10">
 
                 {/* Signup button */}
-                <div className="h-full w-1/2 bg-[#301E67] p-[60px] rounded-tl-md rounded-bl-md">
-                    <div className="flex flex-col justify-center items-center bg-indigo-500 h-[130px] w-full mb-10">
-                        <p className="text-[30px] font-bold text-[#B6EADA] mb-2"><i className="font-medium text-white">Aqua</i>Spring</p>
-                        <p className="text-[13px] text-white">Water Refilling Station</p>
-                    </div>
+                <div className="flex flex-col gap-3 items-center h-full w-1/2 bg-[#301E67] p-[40px] rounded-tl-md rounded-bl-md">
+                    <div className="h-[180px] w-[180px] bg-[url('../images/Aqua.jpg')] bg-center bg-cover"></div>
 
                     <div className="w-full text-center">
                         <p className="text-[14px] text-gray-400"><i>POS System</i></p>
