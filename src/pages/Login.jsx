@@ -35,6 +35,7 @@ const Login = () => {
                         <p className="text-[13px] text-white mb-7">Don't have an account?</p>
                         <button className="bg-[#B2A5FF] shadow-[0px_3px_3px_black] text-[#301E67] font-bold h-[50px] w-3/4 
                                              rounded-lg cursor-pointer hover:bg-secondary-500 hover:text-white transition-all ease-in-out"
+                                onClick={() => navigate("/signup")}
                         >Create Account</button>
                     </div>
                 </div>
@@ -44,7 +45,7 @@ const Login = () => {
                     <h1 className="font-bold text-2xl text-[#301E67]">
                         Welcome back!
                     </h1>
-                    <form className="flex flex-col gap-2 p-3 items-start">
+                    <form className="flex flex-col gap-2 p-3 items-start" onSubmit={handleValidate}>
                         <label className="text-[13px]"> Email or Username* </label>
                         <input type="text" 
                                value={email}
@@ -67,7 +68,7 @@ const Login = () => {
                             </div>
                         </div>
 
-                        <button onClick={handleValidate} 
+                        <button type="submit"
                                 className="bg-[#301E67] shadow-[0px_3px_3px_black] text-white w-full h-[50px] 
                                              rounded-lg cursor-pointer hover:bg-primary-500 font-medium transition-all ease-in-out"
                         >LOGIN
