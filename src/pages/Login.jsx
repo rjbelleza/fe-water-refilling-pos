@@ -14,7 +14,7 @@ const Login = () => {
 
     const handleValidate = (e) => {
         e.preventDefault();
-        (email === user[0].email || username === user[0].username) && password === user[0].password ? navigate("/dashboard") : setError(true); setMessage("Invalid credentials!");
+        (email === user[0].email || username === user[0].username) && password === user[0].password ? navigate("/admin-dashboard") : setError(true); setMessage("Invalid credentials!");
     };
 
     return (
