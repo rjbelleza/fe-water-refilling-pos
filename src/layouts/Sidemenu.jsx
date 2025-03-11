@@ -13,7 +13,7 @@ const Sidemenu = ({menus, user}) => {
             <div className="flex flex-col w-full h-[35%] rounded-tr-lg">
                 <div className="flex justify-between w-full mb-2">
                     <p className="text-[14px] font-medium text-primary">Profile</p>
-                    <img src={settings} className="h-[20px] w-[20px]" />
+                    <img src={settings} className="h-[20px] w-[20px] cursor-pointer" />
                 </div>
                 <div className="h-[1px] w-full bg-white opacity-40 mb-5"></div>
                 {user.map((user) => (
