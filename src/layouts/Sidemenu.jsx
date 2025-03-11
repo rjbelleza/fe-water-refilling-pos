@@ -1,15 +1,16 @@
 import settings from "../assets/icons/settings2.png";
 import Menu from "../components/Menu";
 
-const Sidemenu = ({menus, user}) => {
-    const label = [{menu: "Dashboard", path: "/admin-dashboard"},
-                 {menu: "Inventory", path: "/inventory"},
-                 {menu: "Reports", path: "/reports"},
-                 {menu: "Order History", path: "/order-history"},
-                 {menu: "User/System", path: "/user-settings"}];
+export const label = [{menu: "Dashboard", path: "/admin-dashboard"},
+    {menu: "Inventory", path: "/inventory"},
+    {menu: "Reports", path: "/reports"},
+    {menu: "Order History", path: "/order-history"},
+    {menu: "User/System", path: "/user-settings"}];
+
+const Sidemenu = ({user}) => {
 
     return (
-        <div className="h-full w-[250px] bg-secondary mt-[60px] rounded-tr-lg p-[15px]">
+        <div className="h-full w-[250px] bg-secondary rounded-tr-lg p-[15px]">
             <div className="flex flex-col w-full h-[35%] rounded-tr-lg">
                 <div className="flex justify-between w-full mb-2">
                     <p className="text-[14px] font-medium text-primary">Profile</p>
