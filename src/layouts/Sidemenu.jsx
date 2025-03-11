@@ -2,7 +2,11 @@ import settings from "../assets/icons/settings2.png";
 import Menu from "../components/Menu";
 
 const Sidemenu = ({menus, user}) => {
-    const label = ["Dashboard", "Inventory", "Delivery", "Reports", "Order History", "User/System"];
+    const label = [{menu: "Dashboard", path: "/admin-dashboard"},
+                 {menu: "Inventory", path: "/inventory"},
+                 {menu: "Reports", path: "/reports"},
+                 {menu: "Order History", path: "/order-history"},
+                 {menu: "User/System", path: "/user-settings"}];
 
     return (
         <div className="h-full w-[250px] bg-secondary mt-[60px] rounded-tr-lg p-[15px]">
