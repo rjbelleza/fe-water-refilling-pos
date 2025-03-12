@@ -10,7 +10,7 @@ export const label = [{menu: "Dashboard", path: "/admin-dashboard"},
 const Sidemenu = ({user}) => {
 
     return (
-        <div className="h-full w-[250px] bg-secondary rounded-tr-lg p-[15px]">
+        <div className="h-full w-[250px] bg-secondary rounded-tr-lg p-[15px] fixed left-0">
             <div className="flex flex-col w-full h-[35%] rounded-tr-lg">
                 <div className="flex justify-between w-full mb-2">
                     <p className="text-[14px] font-medium text-primary">Profile</p>

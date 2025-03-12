@@ -32,7 +32,7 @@ const Login = () => {
                         <p className="text-[14px] text-gray-400"><i>POS System</i></p>
                         <div className="h-[2px] w-full bg-secondary mb-10" />
                         <p className="text-[13px] text-primary mb-7">Don't have an account?</p>
-                        <button className="bg-[#B2A5FF] shadow-[0px_3px_3px_black] text-[#301E67] font-medium h-[40px] w-3/6 
+                        <button className="bg-[#bde3ff] shadow-[0px_3px_3px_black] text-[#301E67] font-medium h-[40px] w-3/6 
                                              rounded-md cursor-pointer hover:bg-secondary-500 hover:text-white transition-all ease-in-out"
                                 onClick={() => navigate("/signup")}
                         >Create Account</button>
@@ -40,7 +40,7 @@ const Login = () => {
                 </div>
 
                 {/* Signin */}
-                <div className="flex flex-col h-full w-1/2 bg-[#B2A5FF] rounded-tr-md rounded-br-md p-[30px] gap-8">
+                <div className="flex flex-col h-full w-1/2 bg-[#bde3ff] rounded-tr-md rounded-br-md p-[30px] gap-8">
                     <h1 className="font-bold text-2xl text-[#301E67]">
                         Welcome back!
                     </h1>
