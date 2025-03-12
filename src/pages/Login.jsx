@@ -18,21 +18,22 @@ const Login = () => {
     };
 
     return (
-        <div className="h-screen w-screen bg-[url('../images/water-bg-2.jpg')] bg-center bg-cover flex flex-col justify-center items-center">
+        <div className="h-screen w-screen bg-[url('../images/background.jpg')] backdrop-blur-lg bg-center bg-cover flex flex-col justify-center items-center">
+            <div className="h-full w-full backdrop-blur-sm bg-white/10 flex justify-center items-center">
 
             {/* Auth container */}
-            <div className="flex h-[450px] w-[780px] bg-blue-500 rounded-lg z-10">
+            <div className="flex h-[450px] w-[780px] bg-white rounded-lg z-10 shadow-[4px_4px_7px_black]">
 
                 {/* Signup button */}
-                <div className="flex flex-col gap-3 items-center h-full w-1/2 bg-[#301E67] p-[40px] rounded-tl-md rounded-bl-md">
+                <div className="flex flex-col gap-3 items-center h-full w-1/2 bg-white p-[40px] rounded-tl-md rounded-bl-md">
                     <div className="h-[180px] w-[180px] bg-[url('../images/Aqua.jpg')] bg-center bg-cover"></div>
 
                     <div className="w-full text-center">
                         <p className="text-[14px] text-gray-400"><i>POS System</i></p>
-                        <div className="h-[2px] w-full bg-white mb-10" />
-                        <p className="text-[13px] text-white mb-7">Don't have an account?</p>
-                        <button className="bg-[#B2A5FF] shadow-[0px_3px_3px_black] text-[#301E67] font-bold h-[50px] w-3/4 
-                                             rounded-lg cursor-pointer hover:bg-secondary-500 hover:text-white transition-all ease-in-out"
+                        <div className="h-[2px] w-full bg-secondary mb-10" />
+                        <p className="text-[13px] text-primary mb-7">Don't have an account?</p>
+                        <button className="bg-[#B2A5FF] shadow-[0px_3px_3px_black] text-[#301E67] font-medium h-[40px] w-3/6 
+                                             rounded-md cursor-pointer hover:bg-secondary-500 hover:text-white transition-all ease-in-out"
                                 onClick={() => navigate("/signup")}
                         >Create Account</button>
                     </div>
@@ -79,6 +80,7 @@ const Login = () => {
                     <p className="text-center text-white text-[13px]">{message}</p>
                 </div> 
             }
+            </div>
         </div>
     );
 }
