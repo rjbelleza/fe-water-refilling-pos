@@ -4,15 +4,15 @@ import Breadcrumb from "../components/Breadcrumb";
 import { useLocation } from "react-router-dom";
 import Card from "../components/Card";
 import BarGraph from "../components/BarGraph";
+import { user } from './LoginPage';
 
-
-export const user = [{id: 0, name: "Jane Doe", email: "jane@example.com", role: "administrator"},];
-
-export const label = [{menu: "Dashboard", path: "/admin-dashboard"},
+export const label = [
+    {menu: "Dashboard", path: "/admin-dashboard"},
     {menu: "Inventory", path: "/inventory"},
     {menu: "Reports", path: "/reports"},
     {menu: "Order History", path: "/order-history"},
-    {menu: "User/System", path: "/user-settings"}];
+    {menu: "User/System", path: "/user-settings"}
+];
 
 
 const AdminDashboard = () => {

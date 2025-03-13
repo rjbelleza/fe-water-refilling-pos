@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "/images/Aqua.jpg";
+
+{/* Sample user */}
+export const user = [
+    {name: "Jane Doe", email: "jane@example.com", username: "janedoe", password: "password", role: "administrator"}
+];
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -9,12 +13,13 @@ const Login = () => {
     const [error, setError] = useState(false);
     const [message, setMessage] = useState("");
     const navigate = useNavigate();
-    
-    const user = [{email: "jane@example.com", username: "janedoe", password: "password"}];
 
+    {/* Handle user validation */}
     const handleValidate = (e) => {
         e.preventDefault();
-        (email === user[0].email || username === user[0].username) && password === user[0].password ? navigate("/admin-dashboard") : setError(true); setMessage("Invalid credentials!");
+        (email === user[0].email || username === user[0].username) && password === user[0].password 
+        ? navigate("/admin-dashboard") 
+        : setError(true); setMessage("Invalid credentials!");
     };
 
     return (

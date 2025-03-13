@@ -1,6 +1,7 @@
 import Header from "../layouts/Header";
 import Sidemenu from "../layouts/Sidemenu";
-import { user, label } from "./AdminDashboard";
+import { label } from "./AdminDashboard";
+import { user } from "./LoginPage";
 import { useLocation } from "react-router-dom";
 import Breadcrumb from "../components/Breadcrumb";
 
