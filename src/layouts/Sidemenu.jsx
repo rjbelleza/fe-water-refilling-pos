@@ -1,13 +1,7 @@
 import settings from "../assets/icons/settings2.png";
 import Menu from "../components/Menu";
 
-export const label = [{menu: "Dashboard", path: "/admin-dashboard"},
-    {menu: "Inventory", path: "/inventory"},
-    {menu: "Reports", path: "/reports"},
-    {menu: "Order History", path: "/order-history"},
-    {menu: "User/System", path: "/user-settings"}];
-
-const Sidemenu = ({user}) => {
+const Sidemenu = ({user, label}) => {
 
     return (
         <div className="h-full w-[250px] bg-secondary rounded-tr-lg p-[15px] fixed left-0">

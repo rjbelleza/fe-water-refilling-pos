@@ -5,9 +5,18 @@ import { useLocation } from "react-router-dom";
 import Card from "../components/Card";
 import BarGraph from "../components/BarGraph";
 
+
+export const user = [{id: 0, name: "Jane Doe", email: "jane@example.com", role: "administrator"},];
+
+export const label = [{menu: "Dashboard", path: "/admin-dashboard"},
+    {menu: "Inventory", path: "/inventory"},
+    {menu: "Reports", path: "/reports"},
+    {menu: "Order History", path: "/order-history"},
+    {menu: "User/System", path: "/user-settings"}];
+
+
 const AdminDashboard = () => {
     const location = useLocation();
-    const user = [{id: 0, name: "Jane Doe", email: "jane@example.com", role: "administrator"},];
 
     const sampleData = [
         {category: "Sales Revenue", value: "P70, 000.00", sub1: "Last 30 Days", img: 'src/assets/icons/sales-icon.png'},
@@ -26,7 +35,7 @@ const AdminDashboard = () => {
         <div className="h-screen w-full flex flex-col">
             <Header />
             <div className="flex w-full h-full gap-3 mt-[60px]">
-                <Sidemenu user={user} />
+                <Sidemenu user={user} label={label} />
                 <div className="flex flex-col gap-5 w-full ml-[270px]">
                     <Breadcrumb currentMenu={menu()} />
                     <div className="flex gap-5 flex-wrap mt-[70px]">
