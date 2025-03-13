@@ -38,7 +38,7 @@ const AdminDashboard = () => {
                 <Sidemenu user={user} label={label} />
                 <div className="flex flex-col gap-5 w-full ml-[270px]">
                     <Breadcrumb currentMenu={menu()} />
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:grid-cols-4 mt-[70px] mr-[20px]">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 mt-[70px] mr-[20px]">
                         <Card content={sampleData} />
                     </div>  
                     <div className="flex gap-4 h-full w-full p-4">
