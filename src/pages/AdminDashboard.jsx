@@ -7,11 +7,14 @@ import BarGraph from "../components/BarGraph";
 
 const AdminDashboard = () => {
     const location = useLocation();
-    const user = [{id: 0, name: "Jane Doe", email: "jane@example.com", role: "administrator"}];
-    const sales = [{category: "Sales Revenue", value: "P70, 000.00", sub1: "Last 30 Days"}];
-    const orders = [{category: "Total Orders", value: "350", sub1: "In Store: 200", sub2: "Deliveries: 150"}];
-    const inventoryLevel = [{category: "Inventory Level", value: "Low Stock", sub1: "Stock: 50", sub2: "5-Gallon Bottles"}];
-    const product = [{category: "Best Selling Product", value: "5-Gallon Refill", sub1: "Sold: 250", sub2: "Revenue: P50, 000.00"}];
+    const user = [{id: 0, name: "Jane Doe", email: "jane@example.com", role: "administrator"},];
+
+    const sampleData = [
+        {category: "Sales Revenue", value: "P70, 000.00", sub1: "Last 30 Days", img: 'src/assets/icons/sales-icon.png'},
+        {category: "Total Orders", value: "350", sub1: "In Store: 200", sub2: "Deliveries: 150", img: 'src/assets/icons/orders-icon.png'},
+        {category: "Inventory Level", value: "Low Stock", sub1: "Stock: 50", sub2: "5-Gallon Bottles", img: 'src/assets/icons/inventory-icon.png'},
+        {category: "Best Selling Product", value: "5-Gallon Refill", sub1: "Sold: 250", sub2: "Revenue: P50, 000.00", img: 'src/assets/icons/money-icon.png'}
+    ];
 
     const menu = () => {
         if(location.pathname === "/admin-dashboard") {
@@ -27,15 +30,12 @@ const AdminDashboard = () => {
                 <div className="flex flex-col gap-5 w-full ml-[270px]">
                     <Breadcrumb currentMenu={menu()} />
                     <div className="flex gap-5 flex-wrap mt-[70px]">
-                        <Card content={sales} />
-                        <Card content={orders} />
-                        <Card content={inventoryLevel} />
-                        <Card content={product} />
+                        <Card content={sampleData} />
                     </div>  
                     <div className="flex gap-4 h-full w-full p-4">
                         <BarGraph />
                         <div className="h-full w-[400px] rounded-sm bg-sky">
-
+                            
                         </div>
                     </div>
                 </div>
